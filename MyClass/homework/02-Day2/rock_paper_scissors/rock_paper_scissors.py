@@ -3,12 +3,12 @@ import random
 
 # Print Title
 print("Let's Play Rock Paper Scissors!")
-
+play_again = input("Play? <y> or <n>: ")
 # Specify the three options
 options = ["rock", "paper", "scissors"]
 
     # Create a continuous loop so the user can play multiple rounds
-for i in range(2):    
+if play_again == "Y" or "y":    
     # User Selection
     
     user_choice = input("Make your Choice: (r)ock, (p)aper, (s)cissors? ")
@@ -72,11 +72,9 @@ for i in range(2):
         play_again = input("Play again: (Y)es or (N)o? ")
 
         # If the user's answer is not "y" or "Y", break from the loop
-        if play_again == "Y" or "y":
+        while play_again == "Y" or "y":
             i = 0    
-        else:
-            break
-        # Print an error if the user didn't select a valid choice
+                    # Print an error if the user didn't select a valid choice
     else:
         print("I don't understand that!")
         print("Next time, choose from 'r', 'p', or 's'.")
